@@ -19,7 +19,7 @@ int main(void)
 	}
 	else if ((n % 10) < 6 && (n % 10) != 0)
 	{
-		prrintf("%d and is less than 6 doesnot 0\n", n, n % 10);
+		printf("%d and is less than 6 doesnot 0\n", n, n % 10);
 	}
 	else
 	{
