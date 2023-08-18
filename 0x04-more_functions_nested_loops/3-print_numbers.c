@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * print_numbers - checks for checks for a digit (0 through 9).
+ * print_numbers - checks for checks for a digit (0 through 9)
+ * @c:to be checked the number
  * Return:Always 0
  */
 void print_numbers(void)
