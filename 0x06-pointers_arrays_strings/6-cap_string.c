@@ -7,29 +7,33 @@
  */
 char *cap_string(char *str)
 {
-	int index = 0;
 
-	while (str[index])
+int point = 0;
+
+	while (str[point])
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
+		while (!(str[point] >= 'a' && str[point] <= 'z'))
+			point++;
 
-		if (str[index - 1] == ' ' ||
-		    str[index - 1] == '\t' ||
-		    str[index - 1] == '\n' ||
-		    str[index - 1] == ',' ||
-		    str[index - 1] == ';' ||
-		    str[index - 1] == '.' ||
-		    str[index - 1] == '!' ||
-		    str[index - 1] == '?' ||
-		    str[index - 1] == '"' ||
-		    str[index - 1] == '(' ||
-		    str[index - 1] == ')' ||
-		    str[index - 1] == '{' ||
-		    str[index - 1] == '}' ||
-		    index == 0)
-			str[index] -= 32;
-		index++;
+		if (str[point - 1] == ' ' ||
+		    str[point - 1] == '\t' ||
+		    str[point - 1] == '\n' ||
+		    str[point - 1] == ',' ||
+		    str[point - 1] == ';' ||
+		    str[point - 1] == '.' ||
+		    str[point - 1] == '!' ||
+		    str[point - 1] == '?' ||
+		    str[point - 1] == '"' ||
+		    str[point - 1] == '(' ||
+		    str[point - 1] == ')' ||
+		    str[point - 1] == '{' ||
+		    str[point - 1] == '}' ||
+		    point == 0)
+			str[point] -= 32;
+
+		point++;
 	}
+
 	return (str);
 }
+
