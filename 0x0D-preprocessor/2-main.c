@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	printf("The  name of file %s\n", __FILE__);
+	_putchar("The  name of file %s\n", __FILE__);
 	return (0);
 }
 
