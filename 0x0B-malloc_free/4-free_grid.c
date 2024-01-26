@@ -1,19 +1,22 @@
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
-
 /**
- * _pow_recursion - returns the value of x raised to the power of y
- * @x: value to raise
- * @y: power
+ * free_grid - frees 2d array
+ * @grid: 2d grid
+ * @height: height dimension of grid
+ * Description: frees memory of grid
+ * Return: nothing
  *
- * Return: result of the power
  */
-int _pow_recursion(int x, int y)
+void free_grid(int **grid, int height)
 {
-	if (y < 0)
-		return (-1);
-	if (y == 0)
-		return (1);
-	return (x * _pow_recursion(x, y - 1));
+	int i;
+
+	for (i = 0; i < height; i++)
+	{
+		free(grid[i]);
+	}
+	free(grid);
 }
 
