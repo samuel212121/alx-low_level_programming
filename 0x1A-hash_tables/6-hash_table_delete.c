@@ -35,3 +35,4 @@ void hash_table_delete(hash_table_t *ht)
 	ht = NULL;
 	printf("Leaving\n");
 }
+
